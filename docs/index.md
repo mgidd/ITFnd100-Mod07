@@ -110,6 +110,9 @@ Once I defined all my functions, I ran all aspects of the program in PyCharm. Wh
 ![Figure 8](https://mgidd.github.io/ITFnd100-Mod07/Figure8.png "Figure 8")
 #### Figure 8
 
+![Figure 8](Figure8.png "Figure 8")
+#### Figure 8
+
 If the user enters a file that does not exist, however, or is unreachable by the program, an exception is raised and the user is notified (Figure 9).
 
 ![Figure 9](https://github.com/mgidd/ITFnd100-Mod07/blob/master/docs/Figure9.png "Figure 9")

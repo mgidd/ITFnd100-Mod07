@@ -168,4 +168,4 @@ To verify that the list was saved, I checked the specified file for the binary d
 #### Figure 19
 
 ## Summary
-This paper has provided an overview of the use of pickling binary data and some examples of structured error handling. While pickling works similarly to writing to a text file, there are some different nuances, and it can be important to understand when to use which form when saving and accessing data. Structured error handling is an extremely useful technique for writing more efficient programs, and it can help the developer better understand the potential cracks in their code.
+This page has provided an overview of the use of pickling binary data and some examples of structured error handling. While pickling works similarly to writing to a text file, there are some different nuances, and it can be important to understand when to use which form when saving and accessing data. Structured error handling is an extremely useful technique for writing more efficient programs, and it can help the developer better understand the potential cracks in their code.

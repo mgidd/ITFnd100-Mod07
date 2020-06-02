@@ -106,30 +106,65 @@ except ValueError:  # catch input that can't be converted to int
 ## Running the Program
 Once I defined all my functions, I ran all aspects of the program in PyCharm. When the user selects option 5, they are prompted to enter a file name, and data is unpickled from that file and loaded into the program (Figure 8).
 
+![Figure 8](https://github.com/mgidd/ITFnd100-Mod07/blob/master/docs/Figure8.png "")
 #### Figure 8
+
 If the user enters a file that does not exist, however, or is unreachable by the program, an exception is raised and the user is notified (Figure 9).
+
+![Figure 9](https://github.com/mgidd/ITFnd100-Mod07/blob/master/docs/Figure9.png "")
+#### Figure 9
 
 When the user selects option 4, they are prompted to enter a file name, and data is pickled to a file in binary (Figure 10). In this case, the user can enter either an existing file name, which will overwrite any existing data in the file, or a new file name, and the program will create that file in a relative path.
 
+![Figure 10](https://github.com/mgidd/ITFnd100-Mod07/blob/master/docs/Figure10.png "")
+#### Figure 10
+
 When the user selects option 2, they are prompted to enter a title, which is then added to the list (Figure 11).
+
+![Figure 11](https://github.com/mgidd/ITFnd100-Mod07/blob/master/docs/Figure11.png "")
+#### Figure 11
 
 When the user selects option 3, they are prompted to enter a title, which is then removed from the list (Figure 12).
 
+![Figure 12](https://github.com/mgidd/ITFnd100-Mod07/blob/master/docs/Figure12.png "")
+#### Figure 12
+
 When the user selects option 1, the current list is displayed (Figure 13).
+
+![Figure 13](https://github.com/mgidd/ITFnd100-Mod07/blob/master/docs/Figure13.png "")
+#### Figure 13
 
 If there are no items in the current list, the user will be notified (Figure 14).
 
+![Figure 14](https://github.com/mgidd/ITFnd100-Mod07/blob/master/docs/Figure14.png "")
+#### Figure 14
+
 When the user selects option 6, the program ends and the user is notified (Figure 15).
+
+![Figure 15](https://github.com/mgidd/ITFnd100-Mod07/blob/master/docs/Figure15.png "")
+#### Figure 15
 
 After running the program in PyCharm, I also ran it in Terminal, in the corresponding directory.
 
 The user can start with an empty list, then load data from an existing file to populate the list (Figure 16).
 
+![Figure 16](https://github.com/mgidd/ITFnd100-Mod07/blob/master/docs/Figure16.png "")
+#### Figure 16
+
 The user can add and remove titles from the list (Figure 17).
+
+![Figure 17](https://github.com/mgidd/ITFnd100-Mod07/blob/master/docs/Figure17.png "")
+#### Figure 17
 
 And the user can save created lists to a file (Figure 18).
 
+![Figure 18](https://github.com/mgidd/ITFnd100-Mod07/blob/master/docs/Figure18.png "")
+#### Figure 18
+
 To verify that the list was saved, I checked the specified file for the binary data (Figure 19).
+
+![Figure 19](https://github.com/mgidd/ITFnd100-Mod07/blob/master/docs/Figure19.png "")
+#### Figure 19
 
 ## Summary
 This paper has provided an overview of the use of pickling binary data and some examples of structured error handling. While pickling works similarly to writing to a text file, there are some different nuances, and it can be important to understand when to use which form when saving and accessing data. Structured error handling is an extremely useful technique for writing more efficient programs, and it can help the developer better understand the potential cracks in their code.

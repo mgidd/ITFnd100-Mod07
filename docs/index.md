@@ -9,7 +9,7 @@ This page provides a basic overview of Python’s pickle module and how it can b
 ## Pickling
 To understand pickling in Python, I supplemented the provided information from the textbook and lecture materials with some of my own research. A couple pages I found useful, due to their simplicity and clarity, were https://www.datacamp.com/community/tutorials/pickle-python-tutorial (external link) and https://www.tutorialspoint.com/python-pickling (external link). These pages provide an overview of what pickling can be used for (and when it should not be used) and provide several examples of the pickle module in action.
 
-The first step for using Python’s pickle module is to import it into the script. I placed this import at the start of my script, near where I declared my variables (Figure 1).
+The first step for using Python’s pickle module is to import it into the script. I placed this import at the start of my script, near where I declared my variables (Listing 1).
 
 ```
 import pickle  # import pickle module for writing binary data to file
@@ -18,7 +18,7 @@ import pickle  # import pickle module for writing binary data to file
 
 To perform my pickling tasks for this script, I placed the relevant code in functions within a processing class. To pickle data to a file, my function requires the file name and the data to be pickled as its parameters. In this case, the data is a list, and the file name is retrieved from a separate function in the presentation class capturing user input.
 
-I open the file using the same general format as writing to a text file, but instead of using ‘w’, I use ‘wb’, in which the ‘b’ stands for binary. This tells the program that the data will be written in binary, or byte streams. Next, I use the dump function to write the data to the file before closing it (Figure 2).
+I open the file using the same general format as writing to a text file, but instead of using ‘w’, I use ‘wb’, in which the ‘b’ stands for binary. This tells the program that the data will be written in binary, or byte streams. Next, I use the dump function to write the data to the file before closing it (Listing 2).
 ```
 def pickle_to_file(file_name, list_of_titles):
     """ Pickles data to a file..."""
@@ -29,7 +29,7 @@ def pickle_to_file(file_name, list_of_titles):
 ```
 #### Listing 2
 
-To retrieve the binary data from a file, I use a function requiring the name of the file as its parameter. I open the file and this time use the notation ‘rb’ for reading from binary. Then, the pickle load function allows the program to unpickle the file data and load it into the program. As always, I close the file after the data is retrieved (Figure 3).
+To retrieve the binary data from a file, I use a function requiring the name of the file as its parameter. I open the file and this time use the notation ‘rb’ for reading from binary. Then, the pickle load function allows the program to unpickle the file data and load it into the program. As always, I close the file after the data is retrieved (Listing 3).
 ```
 def unpickle_from_file(file_name):
     """ Unpickles data from a file..."""
@@ -42,7 +42,7 @@ def unpickle_from_file(file_name):
 ```
 #### Listing 3
 
-I call these functions for pickling and unpickling in the main body of my script (Figure 4).
+I call these functions for pickling and unpickling in the main body of my script (Listing 4).
 ```
 elif menu_choice == 4:  # pickle list to file
     IO.input_file_name()  # gets file name input
@@ -61,7 +61,7 @@ This script contains several “try/except” blocks, a form of structured error
 
 A few resources that I found helpful for learning about error handling were https://www.datacamp.com/community/tutorials/exception-handling-python (external link) and https://www.w3schools.com/python/python_try_except.asp (external link). These pages explain the use of raising and handling exceptions for a variety of common errors.
 
-In my function for unpickling data from a file, I utilized a try/except block to anticipate the user entering a file name that cannot be reached by the program (Figure 5). This same block includes a second except statement for situations in which the file data is somehow corrupted and cannot be unpickled.
+In my function for unpickling data from a file, I utilized a try/except block to anticipate the user entering a file name that cannot be reached by the program (Listing 5). This same block includes a second except statement for situations in which the file data is somehow corrupted and cannot be unpickled.
 ```
 def unpickle_from_file(file_name):
     """ Unpickles data from a file..."""
@@ -73,7 +73,7 @@ def unpickle_from_file(file_name):
 ```
 #### Listing 5
 
-In the main body of my script, I use a try/except block to anticipate the user entering something other than the numbers 1-6, which correspond to the available menu options (Figure 6).
+In the main body of my script, I use a try/except block to anticipate the user entering something other than the numbers 1-6, which correspond to the available menu options (Listing 6).
 ```
 try:
 
@@ -94,7 +94,7 @@ try:
 ```
 #### Listing 6
 
-Similarly, because I converted my user input for menu choice to type int, I included an exception to catch input errors that could not be converted to type int (Figure 7).
+Similarly, because I converted my user input for menu choice to type int, I included an exception to catch input errors that could not be converted to type int (Listing 7).
 ```
 try:
     choice = int(input('Which option would you like to perform? [1 to 6]: '))

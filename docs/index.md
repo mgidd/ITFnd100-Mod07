@@ -9,10 +9,9 @@ This page provides a basic overview of Python’s pickle module and how it can b
 ## Pickling
 To understand pickling in Python, I supplemented the provided information from the textbook and lecture materials with some of my own research. A couple pages I found useful, due to their simplicity and clarity, were https://www.datacamp.com/community/tutorials/pickle-python-tutorial (external link) and https://www.tutorialspoint.com/python-pickling (external link). These pages provide an overview of what pickling can be used for (and when it should not be used) and provide several examples of the pickle module in action.
 
-The first step for using Python’s pickle module is to import it into the script. I placed this import at the start of my script near where I declared my variables (Figure 1).
+The first step for using Python’s pickle module is to import it into the script. I placed this import at the start of my script, near where I declared my variables (Figure 1).
 
 ```
-# --- Data --- #
 import pickle  # import pickle module for writing binary data to file
 ```
 #### Figure 1

@@ -107,7 +107,7 @@ except ValueError:  # catch input that can't be converted to int
 ## Running the Program
 Once I defined all my functions, I ran all aspects of the program in PyCharm. When the user selects option 5, they are prompted to enter a file name, and data is unpickled from that file and loaded into the program (Figure 8).
 
-![Figure 8](https://github.com/mgidd/ITFnd100-Mod07/blob/master/docs/Figure8.png "Figure 8")
+![Figure 8](https://mgidd.github.io/ITFnd100-Mod07/Figure8.png "Figure 8")
 #### Figure 8
 
 If the user enters a file that does not exist, however, or is unreachable by the program, an exception is raised and the user is notified (Figure 9).

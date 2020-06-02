@@ -14,7 +14,7 @@ The first step for using Python’s pickle module is to import it into the scrip
 ```
 import pickle  # import pickle module for writing binary data to file
 ```
-#### Figure 1
+#### Listing 1
 
 To perform my pickling tasks for this script, I placed the relevant code in functions within a processing class. To pickle data to a file, my function requires the file name and the data to be pickled as its parameters. In this case, the data is a list, and the file name is retrieved from a separate function in the presentation class capturing user input.
 
@@ -27,7 +27,7 @@ def pickle_to_file(file_name, list_of_titles):
     file.close()  # close file
     print('\n' + 'Reading list saved to file.')
 ```
-#### Figure 2
+#### Listing 2
 
 To retrieve the binary data from a file, I use a function requiring the name of the file as its parameter. I open the file and this time use the notation ‘rb’ for reading from binary. Then, the pickle load function allows the program to unpickle the file data and load it into the program. As always, I close the file after the data is retrieved (Figure 3).
 ```
@@ -40,7 +40,7 @@ def unpickle_from_file(file_name):
     print('\n' + 'Reading list loaded from file.')
     return reading_lst  # return unpickled list
 ```
-#### Figure 3
+#### Listing 3
 
 I call these functions for pickling and unpickling in the main body of my script (Figure 4).
 ```
@@ -54,7 +54,7 @@ elif menu_choice == 5:  # unpickle list from file
     Processor.unpickle_from_file(string_file_name)  # unpickles data from file
     continue
 ```
-#### Figure 4
+#### Listing 4
 
 ## Structured Error Handling
 This script contains several “try/except” blocks, a form of structured error handling in Python. These sequences are intended to anticipate particular errors that may arise in the program and “catch” them so that they do not cause the program to fail and terminate. A handy feature is being able to create custom error messages for these exceptions so that they display more user-friendly information, rather than (or in addition to) Python’s built-in error messages.
@@ -71,7 +71,7 @@ def unpickle_from_file(file_name):
     except pickle.UnpicklingError:  # catch corrupted data error
         print('\n' + 'Data error: Please check file for corruption.')
 ```
-#### Figure 5
+#### Listing 5
 
 In the main body of my script, I use a try/except block to anticipate the user entering something other than the numbers 1-6, which correspond to the available menu options (Figure 6).
 ```
@@ -92,7 +92,7 @@ try:
     elif menu_choice != 1-6:
         raise IndexError()
 ```
-#### Figure 6
+#### Listing 6
 
 Similarly, because I converted my user input for menu choice to type int, I included an exception to catch input errors that could not be converted to type int (Figure 7).
 ```
@@ -102,7 +102,8 @@ try:
 except ValueError:  # catch input that can't be converted to int
     print('\n' + 'Value error: Please enter a number.')
 ```
-#### Figure 7
+#### Listing 7
+
 ## Running the Program
 Once I defined all my functions, I ran all aspects of the program in PyCharm. When the user selects option 5, they are prompted to enter a file name, and data is unpickled from that file and loaded into the program (Figure 8).
 
